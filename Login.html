@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<link rel="stylesheet" type="text/css" href="visual.css">
+<body>
+    <div class="contener">
+        <div class="card">
+            <form action="Verificação.php" method="POST">
+                <h1>Login</h1>
+                <input type="email" class="vinput" autocomplete="off" name="email" placeholder="E-Mail"><br><br>
+                <input type="password" class="vinput" name="senha" id="senha" placeholder="Senha">
+                <img src="open.png" id="open" width="20px" onclick="clicar()"><br><br>
+                <div id="botoess">
+                    <button type="submit" name="submit" id="botoes">Entrar</button>
+                </div><br><br>
+                    <a href="Cadastro.php" target="parent">Não Sou Cadastrado</a>
+            </form>
+        </div>
+    </div>
+</body>
+<script>
+    function clicar(){
+        var senha = document.getElementById("senha")
+        var olho = document.getElementById("open")
+
+        if(senha.type == "password"){
+            senha.setAttribute("type", "text")
+            olho.setAttribute("src", "closed.png")
+        }else {
+            senha.setAttribute("type", "password")
+            olho.setAttribute("src", "open.png")
+        }
+    }
+</script>
+</html>
